@@ -1,4 +1,11 @@
 import { v4 as uuid } from "uuid";
+import { getRandomString } from "./utils";
+
+export interface Subtitle {
+  id: string;
+  text: string;
+  height: number;
+}
 
 const data = Array.from(
   { length: 25000 },
@@ -9,9 +16,14 @@ const data = Array.from(
     } as Subtitle)
 );
 
-export interface Subtitle {
-  id: string;
-  text: string;
-}
+// const data = Array.from(
+//   { length: 20 },
+//   (_el, idx) =>
+//     ({
+//       id: uuid(),
+//       text: getRandomString() + ` ${idx}`,
+//       height: 0,
+//     } as Subtitle)
+// );
 
 export default data;
