@@ -8,7 +8,7 @@ export interface Subtitle {
 }
 
 const data = Array.from(
-  { length: 25000 },
+  { length: 10000 },
   (_el, idx) =>
     ({
       id: uuid(),
